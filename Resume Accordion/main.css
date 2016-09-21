@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+}
+
+.one{
+	width: 2px;
+	height: 20px;
+	background: black;
+	position: absolute;
+	margin-left: 14px;
+	margin-top: 5px;		
+}
+.two{
+	width: 20px;
+	height: 2px;
+	background: black;
+	position: absolute;
+	margin-top: 14px;
+	margin-left: 5px;	
+}
+.open{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	float: left;		
+}
+ul{
+	list-style: none;
+	transition-duration: 1s;
+	margin-left: 30px;
+	display: none;
+}
+.category{ 
+	line-height: 30px;
+}
+
+.name{
+	text-align: center;
+	position: relative;
+	font-size: 50px;
+	line-height: 20vh;
+	width: 100%;
+}
+
+.rotate{
+	transform: rotate(-45deg);
+	transition: transform .7s;
+}
+.rotated{
+	transform: rotate(0deg);
+	transition: transform .7s;
+}
