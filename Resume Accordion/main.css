@@ -23,7 +23,7 @@ body{
 	margin-top: 14px;
 	margin-left: 5px;	
 }
-.open{
+.toggler{
 	width: 30px;
 	height: 30px;
 	position: relative;
@@ -54,4 +54,7 @@ ul{
 .rotated{
 	transform: rotate(0deg);
 	transition: transform .7s;
+}
+.highlight{
+	color: gray;
 }

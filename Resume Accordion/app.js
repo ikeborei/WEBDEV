@@ -1,24 +1,48 @@
 $(document).ready(function(){
-	var rotated = false;
 
-	$(".open").click(function(){
+	var toggler = $(".toggler").get();
+	var tracker = -1;
+	
+	$(".toggler").click(function(){
+
+		var index = $("div.toggler").index(this);
+		var i = 0;
+
+		while(i < toggler.length)
+		{
+			if(i === index && index === tracker)
+			{
+				$(toggler[i]).removeClass("rotate");
+				$(toggler[i]).addClass("rotated");
+			}			
+			else if(i === index && index !== tracker)
+			{
+				$(toggler[i]).removeClass("rotated");
+				$(toggler[i]).addClass("rotate");
+			}
+			else
+			{
+				$(toggler[i]).removeClass("rotate");
+				$(toggler[i]).addClass("rotated");				
+			}	
+			i++;
+		}	
 		
-		$(this).removeClass("rotated");
-		$(this).removeClass("rotate");
-
-		if(rotated == true)
+		if(tracker === index)
 		{
-			$(this).addClass("rotated");
-			rotated = false;
+			$(toggler[index]).siblings("ul").slideToggle();
+			tracker = -1;			
 		}
-		else if(rotated == false)
+		else if( tracker !== index && tracker !== -1)
 		{
-			$(this).addClass("rotate");
-			rotated = true;
+			$(toggler[tracker]).siblings("ul").slideToggle();
+			$(toggler[index]).siblings("ul").slideToggle();			
+			tracker = index;
+		}	
+		else //if( tracker !== index)
+		{
+			$(toggler[index]).siblings("ul").slideToggle();
+			tracker = index;
 		}
-		// $(this).siblings("ul").slideToggle(700);
-		// console.log(rotated);
-		// $(this).toggleClass("rotate");				
 	});
-
 });
