@@ -30,18 +30,18 @@ $(document).ready(function(){
 		
 		if(tracker === index)
 		{
-			$(toggler[index]).siblings("ul").slideToggle();
+			$(toggler[index]).siblings("ul").toggle();
 			tracker = -1;			
 		}
 		else if( tracker !== index && tracker !== -1)
 		{
-			$(toggler[tracker]).siblings("ul").slideToggle();
-			$(toggler[index]).siblings("ul").slideToggle();			
+			$(toggler[tracker]).siblings("ul").toggle();
+			$(toggler[index]).siblings("ul").toggle();			
 			tracker = index;
 		}	
 		else //if( tracker !== index)
 		{
-			$(toggler[index]).siblings("ul").slideToggle();
+			$(toggler[index]).siblings("ul").toggle();
 			tracker = index;
 		}
 	});

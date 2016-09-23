@@ -36,7 +36,7 @@ ul{
 	display: none;
 }
 .category{ 
-	line-height: 30px;
+	line-height: 30px;	
 }
 
 .name{
@@ -55,6 +55,7 @@ ul{
 	transform: rotate(0deg);
 	transition: transform .7s;
 }
-.highlight{
-	color: gray;
+.content{
+	margin-bottom: 45px;
+	margin-top: 45px;
 }
